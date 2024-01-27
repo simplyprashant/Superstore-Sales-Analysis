@@ -22,9 +22,3 @@ SELECT
 FROM store
 GROUP BY order_year
 ORDER BY order_year;
-
-
-
-
-
-   
