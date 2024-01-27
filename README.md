@@ -26,3 +26,5 @@ GROUP BY order_year
 ORDER BY order_year;
 ```
 ![Net sales and profit by year](Net sales by year.png)
+![image](https://github.com/simplyprashant/Superstore-Sales-Analysis/assets/133598264/d688f2e7-4a21-435b-ad02-d504f4df7ff3)
+
