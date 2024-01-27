@@ -12,4 +12,16 @@ The following steps have been taken for the analysis:
 4. Visualization of the data is done using PowerBI.
 
 
+## Calculating total sales and profit by year
+
+SELECT
+    EXTRACT(YEAR FROM "Order Date") AS order_year,
+    SUM("Sales") AS total_sales,
+    SUM("Profit") AS total_profit
+FROM store
+GROUP BY order_year
+ORDER BY order_year;
+
+
+
    
