@@ -24,5 +24,5 @@ SELECT
 FROM store
 GROUP BY order_year
 ORDER BY order_year;
-
-<img width="199" alt="image" src="https://github.com/simplyprashant/Superstore-Sales-Analysis/assets/133598264/03e1bbfd-8791-4f7c-8f9f-77183b880524">
+```
+![Net sales and profit by year](Net sales by year.png)
