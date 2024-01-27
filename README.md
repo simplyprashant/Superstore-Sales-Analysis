@@ -14,7 +14,7 @@ The following steps have been taken for the analysis:
 
 ### Query 1: Calculating total sales and profit by year
 
-Net sales and profit is calculated for each year
+Net sales and profit is calculated for each year using the below query
 
 ```sql
 SELECT
@@ -25,6 +25,6 @@ FROM store
 GROUP BY order_year
 ORDER BY order_year;
 ```
-![Net sales and profit by year](Net sales by year.png)
+This is result achieved. It is clear that the net sales and profit have generally increased throughout the years (2014-2017) except in 2015 where there was a small dip in sales as compared to the previous year.
 ![image](https://github.com/simplyprashant/Superstore-Sales-Analysis/assets/133598264/d688f2e7-4a21-435b-ad02-d504f4df7ff3)
 
