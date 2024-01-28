@@ -136,6 +136,8 @@ ORDER BY SUM("Discount") DESC
 
 Let's also see the sub-categories where the discounts are the highest.
 
+### Query 8: Most discounted product sub-categories
+
 ```sql
 SELECT 
       "Category",
