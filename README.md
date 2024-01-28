@@ -30,4 +30,21 @@ It is clear that the net sales and profit have generally increased throughout th
 
 ![Net Sales](Net_sales.png)
 
+This gives us with an overall picture about the sales and profit throughout the years. However, we need to break it down further to identify top and bottom performing areas.
+
+### Query 2: Calculating total sales and profit by quarter
+
+Net sales and profit is calculated for each quarter using the below query
+
+```sql
+SELECT
+    EXTRACT(YEAR FROM "Order Date") AS order_year,
+    EXTRACT(QUARTER FROM "Order Date") AS order_quarter,
+    SUM("Sales") AS total_sales,
+    SUM("Profit") AS total_profit
+FROM store
+GROUP BY order_year, order_quarter
+ORDER BY order_year, order_quarter;
+```
+
 
