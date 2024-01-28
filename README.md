@@ -84,6 +84,8 @@ California, New York, and Washington are the top 3 states that bring in the high
 
 ![Net sales by state](top5state.png)
 
+### Query 5: Bottom 10 States in terms of profit
+
 ```sql
 SELECT
       DISTINCT("State"),
@@ -97,6 +99,8 @@ ORDER BY Net_profit
 Texas, Ohio, Pennslyvania, Illinois, North Carolina, Colorado, Tennessee, Arizona, Florida and Oregon are the 10 states that needs attention as they are not even able to break-even. This can be found out using the above query.
 
 Now, let's take a closer look at the cities from these states and how they are faring. The query is given below:
+
+### Query 6: Top 5 Cities in terms of profit
 
 ```sql
 SELECT
