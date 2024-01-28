@@ -149,6 +149,23 @@ ORDER BY SUM("Discount") DESC
 ```
 ![sub-category wise discounts](subcategory.png)
 
+Office supplies are the most discounted items followed by Furniture and Technology. Binders, Phones and Furnishings are the most discounted product sub-categories.
+
+### Query 9: Product sub-categories wise sales and profits
+
+```sql
+SELECT 
+      "Sub-Category",
+	  SUM("Sales") AS net_sales,
+	  SUM("Profit") AS net_profit,
+	  SUM("Discount") AS total_discount
+FROM store
+GROUP BY "Sub-Category"
+ORDER BY SUM("Profit") DESC
+```
+The biggest profits came from Copiers, Phones and accessories. Tables, bookcases and supplies were the only 3 out of 17 sub-categories that were unable to return a profit.
+
+![Bottom sub-categories](bottom_sub.png)
 
 
 
