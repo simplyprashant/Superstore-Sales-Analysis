@@ -80,5 +80,18 @@ GROUP BY "State"
 ORDER BY Net_profit DESC
 LIMIT 5
 ```
+California, New York, and Washington are the top 3 states that bring in the highest profits. It is to be noted that even though sales in New York is less than California by more than 14000 but the profits are comparable. This shows that the profit margin is higher for New York. 
 ![Net sales by state](top5state.png)
 
+Texas, Ohio, Pennslyvania, Illinois, North Carolina, Colorado, Tennessee, Arizona, Florida and Oregon are the 10 states that needs attention as they are not even able to break-even. This can be found out using the below query.
+
+```sql
+	SELECT
+		DISTINCT("State"),
+		SUM("Sales") AS Net_sales,
+		SUM("Profit") AS Net_profit
+	FROM store
+	GROUP BY "State"
+	HAVING SUM("Profit") < 0
+	ORDER BY Net_profit
+```
