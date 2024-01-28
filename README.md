@@ -134,6 +134,19 @@ ORDER BY SUM("Discount") DESC
 ```
 ![category wise discount](category.png)
 
+Let's also see the sub-categories where the discounts are the highest.
+
+```sql
+SELECT 
+      "Category",
+      "Sub-Category",
+       SUM("Discount") AS total_discount
+FROM store
+GROUP BY "Category","Sub-Category"
+ORDER BY SUM("Discount") DESC
+```
+![sub-category wise discounts](subcategory.png)
+
 
 
 
