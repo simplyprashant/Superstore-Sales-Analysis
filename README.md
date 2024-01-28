@@ -169,6 +169,7 @@ The biggest profits came from Copiers, Phones and accessories. Tables, bookcases
 
 Next we can take a look at the winning segments.
 
+### Query 10: Segment wise sales and profits
 ```sql
 SELECT 
      "Segment",
@@ -182,4 +183,35 @@ The consumer segment leads the way with the net highest sales and profit which i
 
 ![segment wise sales](segment.png)
 
+Now that we have seen all the top categories and segments, we will see which are the most loyal customers and how much have they spent in total.
 
+### Query 11: Top 10 Loyal customers with respect to total sales
+```sql
+SELECT
+     "Customer Name",
+	 SUM("Sales") AS net_sales,
+	 SUM("Profit") AS net_profit
+FROM store
+GROUP BY "Customer Name"
+ORDER BY SUM("Sales") DESC
+LIMIT 10
+```
+We can notice something interesting from the below list of customers. The store has been unable to make profit from it's most loyal customer Sean Miller. He is the only customer in the top 10 list where the store has been unable to make profit.
+
+![loyal customers](loyal.png)
+
+Let's take a look at his purchase sub-categories using the below query.
+### Query 12: Most loyal customer purchase sub-categories
+```sql
+SELECT
+     "Customer Name",
+	 "Sub-Category",
+	 SUM("Sales") AS net_sales,
+	 SUM("Profit") AS net_profit
+FROM store
+WHERE "Customer Name" = 'Sean Miller'
+GROUP BY "Customer Name","Sub-Category"
+ORDER BY SUM("Sales") DESC
+LIMIT 10
+```
+![most loyal customer](most_loyal.png)
