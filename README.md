@@ -85,13 +85,37 @@ California, New York, and Washington are the top 3 states that bring in the high
 ![Net sales by state](top5state.png)
 
 ```sql
-	SELECT
-		DISTINCT("State"),
-		SUM("Sales") AS Net_sales,
-		SUM("Profit") AS Net_profit
-	FROM store
-	GROUP BY "State"
-	HAVING SUM("Profit") < 0
-	ORDER BY Net_profit
+SELECT
+      DISTINCT("State"),
+      SUM("Sales") AS Net_sales,
+      SUM("Profit") AS Net_profit
+FROM store
+GROUP BY "State"
+HAVING SUM("Profit") < 0
+ORDER BY Net_profit
 ```
 Texas, Ohio, Pennslyvania, Illinois, North Carolina, Colorado, Tennessee, Arizona, Florida and Oregon are the 10 states that needs attention as they are not even able to break-even. This can be found out using the above query.
+
+Now, let's take a closer look at the cities from these states and how they are faring. The query is given below:
+
+```sql
+SELECT
+      DISTINCT("City"),
+      SUM("Sales") AS Net_sales,
+      SUM("Profit") AS Net_profit
+FROM store
+GROUP BY "City"
+ORDER BY Net_profit DESC
+LIMIT 5
+```
+As can be seen from the result below, New York city, Los Angeles, and Seattle are the top performing cities in terms of total profit achieved. In fact, the total profit from New York city was more than the combined profit of the next 2 cities.
+
+![city](city.png)
+
+While the cities above had excellent sales and profits, there are many cities where urgent action needs to be taken as they are not bringing in any profits despite having considerable sales. Strategy revision and proper planning needs to be done.
+
+![bottom cities](bottom_cities.png)
+
+
+
+
