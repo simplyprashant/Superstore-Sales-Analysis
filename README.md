@@ -120,6 +120,21 @@ While the cities above had excellent sales and profits, there are many cities wh
 
 ![bottom cities](bottom_cities.png)
 
+Now we want to see what the most discounted product categories are. We can use this to check if high discounted products also lead to high sales or not? 
+
+### Query 7: Most discounted product categories
+
+```sql
+SELECT 
+      "Category",
+      SUM("Discount") AS total_discount
+FROM store
+GROUP BY "Category"
+ORDER BY SUM("Discount") DESC
+```
+![category wise discount](category.png)
+
+
 
 
 
