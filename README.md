@@ -167,6 +167,19 @@ The biggest profits came from Copiers, Phones and accessories. Tables, bookcases
 
 ![Bottom sub-categories](bottom_sub.png)
 
+Next we can take a look at the winning segments.
 
+```sql
+SELECT 
+     "Segment",
+      SUM("Sales") AS net_sales,
+      SUM("Profit") AS net_profit
+FROM store
+GROUP BY "Segment"
+ORDER BY SUM("Sales") DESC
+```
+The consumer segment leads the way with the net highest sales and profit which is followed by Corporate and Home office segment.
+
+![segment wise sales](segment.png)
 
 
