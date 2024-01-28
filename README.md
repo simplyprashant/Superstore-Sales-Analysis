@@ -64,4 +64,21 @@ FROM store
 GROUP BY "Region"
 ORDER BY "Region"
 ```
+West is the best performing region in terms of both sales and net profit followed by East. The sales in South region is the lowest but it still manages to make more profit than the Central region. The situation in Central region is alarming as it generates more sales than the South region but the profit margin is the lowest out of all the regions. Thorough investigation needs to be done and availability of resources needs to be checked.
+
 ![Net sales by region](Region.png)
+
+### Query 4: Total sales and profit by State
+
+```sql
+SELECT
+    DISTINCT("State"),
+	SUM("Sales") AS Net_sales,
+	SUM("Profit") AS Net_profit
+FROM store
+GROUP BY "State"
+ORDER BY Net_profit DESC
+LIMIT 5
+```
+![Net sales by state](top5state.png)
+
