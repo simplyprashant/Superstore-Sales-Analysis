@@ -47,8 +47,21 @@ GROUP BY order_year, order_quarter
 ORDER BY order_year, order_quarter;
 ```
 
-We can see the high performing quarters from the below table. The sales have increased from Q1 to Q4 for every year while the profits have also increased for the years 2014-2015, there was a dip in profit when going from Q2 to Q3 in 2016 and going from Q1 to Q2 in 2017. Q1, Q3, and Q4 of the year 2017 were the highest sale months, while Q2 of 2016 recorded highest sales amongst other quarters.
+We can see the high performing quarters from the below table. The sales have increased from Q1 to Q4 for every year while the profits have also increased for the years 2014-2015, there was a dip in profit when going from Q2 to Q3 in 2016 and going from Q1 to Q2 in 2017. Q1, Q3, and Q4 of the year 2017 were the highest sale months, while Q2 of 2016 recorded highest sales amongst other quarters. It is evident that most sales are done in Q4 where the profits are also high.
 
 ![Net sales by quarter](Quarter_wise.png)
 
+Next we will take a look at the performance by region
 
+### Query 3: Calculating total sales and profit by region
+
+```sql
+SELECT 
+"Region",
+SUM("Sales") AS Net_sales,
+SUM("Profit") AS Net_profit
+FROM store
+GROUP BY "Region"
+ORDER BY "Region"
+```
+![Net sales by region](Region.png)
