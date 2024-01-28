@@ -47,4 +47,6 @@ GROUP BY order_year, order_quarter
 ORDER BY order_year, order_quarter;
 ```
 
+![Net sales by quarter](Quarter_wise.png)
+
 
