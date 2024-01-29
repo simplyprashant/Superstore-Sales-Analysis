@@ -215,3 +215,7 @@ ORDER BY SUM("Sales") DESC
 LIMIT 10
 ```
 ![most loyal customer](most_loyal.png)
+
+Out of the 9 sub-categories the customer has made purchases in, 5 were those where the store has been able to make profit.
+However, it is crucial to note that even though the store made profit in majority of the categories, the profit margin was extremely low. The net losses from the other 4 categories were substantially high due to which the store didn't make any net profit from it's most loyal customer.
+
