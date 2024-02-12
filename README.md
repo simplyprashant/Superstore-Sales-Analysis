@@ -9,7 +9,7 @@ The following steps have been taken for the analysis:
 1. The original dataset has been pre-processed using Python to standardize the date columns, check for any missing values etc.
 2. The processed dataset was then imported into a new .csv file for analysis
 3. In-depth analysis is carried out using PostgreSQL.
-4. Visualization of the data is done using PowerBI.
+
 
 
 ### Query 1: Calculating total sales and profit by year
