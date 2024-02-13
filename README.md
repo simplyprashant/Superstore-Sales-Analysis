@@ -28,7 +28,7 @@ ORDER BY order_year;
 It is clear that the net sales and profit have generally increased throughout the years (2014-2017) except in 2015 where there was a small dip in sales as compared to the previous year. Profit has steadily increased throughout the years.
 
 
-![Net Sales](Net_sales.png)
+![Net Sales](img/Net_sales.png)
 
 This gives us with an overall picture about the sales and profit throughout the years. However, we need to break it down further to identify top and bottom performing areas.
 
