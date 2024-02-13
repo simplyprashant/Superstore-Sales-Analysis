@@ -9,7 +9,7 @@ The following steps have been taken for the analysis:
 1. The original dataset has been pre-processed using Python to standardize the date columns, check for any missing values etc.
 2. The processed dataset was then imported into a new .csv file for analysis
 3. In-depth analysis is carried out using PostgreSQL.
-
+4. Dashboard is created using Power BI.
 
 
 ### Query 1: Calculating total sales and profit by year
@@ -220,4 +220,9 @@ Out of the 9 sub-categories the customer has made purchases in, 5 were those whe
 However, it is crucial to note that even though the store made profit in majority of the categories, the profit margin was extremely low. The net losses from the other 4 categories were substantially high due to which the store didn't make any net profit from it's most loyal customer.
 
 This makes sense as the customer did not make any purchases from the most profitable sub- categories i.e. Copiers, Phones and accessories.
+
+Here is the dashboard that is created using Power BI.
+
+![](sales.png)
+![](Profit.png)
 
