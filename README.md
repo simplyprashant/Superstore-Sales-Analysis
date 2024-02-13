@@ -49,7 +49,7 @@ ORDER BY order_year, order_quarter;
 
 We can see the high performing quarters from the below table. The sales have increased from Q1 to Q4 for every year while the profits have also increased for the years 2014-2015, there was a dip in profit when going from Q2 to Q3 in 2016 and going from Q1 to Q2 in 2017. Q1, Q3, and Q4 of the year 2017 were the highest sale months, while Q2 of 2016 recorded highest sales amongst other quarters. It is evident that most sales are done in Q4 where the profits are also high.
 
-![Net sales by quarter](Quarter_wise.png)
+![Net sales by quarter](img/Quarter_wise.png)
 
 Next we will take a look at the performance by region
 
@@ -66,7 +66,7 @@ ORDER BY "Region"
 ```
 West is the best performing region in terms of both sales and net profit followed by East. The sales in South region is the lowest but it still manages to make more profit than the Central region. The situation in Central region is alarming as it generates more sales than the South region but the profit margin is the lowest out of all the regions. Thorough investigation needs to be done and availability of resources needs to be checked.
 
-![Net sales by region](Region.png)
+![Net sales by region](img/Region.png)
 
 ### Query 4: Total sales and profit by State
 
@@ -82,7 +82,7 @@ LIMIT 5
 ```
 California, New York, and Washington are the top 3 states that bring in the highest profits. It is to be noted that even though sales in New York is less than California by more than 14000 but the profits are comparable. This shows that the profit margin is higher for New York. 
 
-![Net sales by state](top5state.png)
+![Net sales by state](img/top5state.png)
 
 ### Query 5: Bottom 10 States in terms of profit
 
@@ -114,11 +114,11 @@ LIMIT 5
 ```
 As can be seen from the result below, New York city, Los Angeles, and Seattle are the top performing cities in terms of total profit achieved. In fact, the total profit from New York city was more than the combined profit of the next 2 cities.
 
-![city](city.png)
+![city](img/city.png)
 
 While the cities above had excellent sales and profits, there are many cities where urgent action needs to be taken as they are not bringing in any profits despite having considerable sales. Strategy revision and proper planning needs to be done.
 
-![bottom cities](bottom_cities.png)
+![bottom cities](img/bottom_cities.png)
 
 Now we want to see what the most discounted product categories are. We can use this to check if high discounted products also lead to high sales or not? 
 
@@ -132,7 +132,7 @@ FROM store
 GROUP BY "Category"
 ORDER BY SUM("Discount") DESC
 ```
-![category wise discount](category.png)
+![category wise discount](img/category.png)
 
 Let's also see the sub-categories where the discounts are the highest.
 
@@ -147,7 +147,7 @@ FROM store
 GROUP BY "Category","Sub-Category"
 ORDER BY SUM("Discount") DESC
 ```
-![sub-category wise discounts](subcategory.png)
+![sub-category wise discounts](img/subcategory.png)
 
 Office supplies are the most discounted items followed by Furniture and Technology. Binders, Phones and Furnishings are the most discounted product sub-categories.
 
@@ -165,7 +165,7 @@ ORDER BY SUM("Profit") DESC
 ```
 The biggest profits came from Copiers, Phones and accessories. Tables, bookcases and supplies were the only 3 out of 17 sub-categories that were unable to return a profit.
 
-![Bottom sub-categories](bottom_sub.png)
+![Bottom sub-categories](img/bottom_sub.png)
 
 Next we can take a look at the winning segments.
 
@@ -181,7 +181,7 @@ ORDER BY SUM("Sales") DESC
 ```
 The consumer segment leads the way with the net highest sales and profit which is followed by Corporate and Home office segment.
 
-![segment wise sales](segment.png)
+![segment wise sales](img/segment.png)
 
 Now that we have seen all the top categories and segments, we will see which are the most loyal customers and how much have they spent in total.
 
@@ -198,7 +198,7 @@ LIMIT 10
 ```
 We can notice something interesting from the below list of customers. The store has been unable to make profit from it's most loyal customer Sean Miller. He is the only customer in the top 10 list where the store has been unable to make profit.
 
-![loyal customers](loyal.png)
+![loyal customers](img/loyal.png)
 
 Let's take a look at his purchase sub-categories using the below query.
 ### Query 12: Most loyal customer purchase sub-categories
@@ -214,7 +214,7 @@ GROUP BY "Customer Name","Sub-Category"
 ORDER BY SUM("Sales") DESC
 LIMIT 10
 ```
-![most loyal customer](most_loyal.png)
+![most loyal customer](img/most_loyal.png)
 
 Out of the 9 sub-categories the customer has made purchases in, 5 were those where the store has been able to make profit.
 However, it is crucial to note that even though the store made profit in majority of the categories, the profit margin was extremely low. The net losses from the other 4 categories were substantially high due to which the store didn't make any net profit from it's most loyal customer.
@@ -223,6 +223,6 @@ This makes sense as the customer did not make any purchases from the most profit
 
 Here is the dashboard that is created using Power BI.
 
-![](sales.png)
-![](Profit.png)
+![](img/sales.png)
+![](img/Profit.png)
 
